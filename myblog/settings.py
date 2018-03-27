@@ -30,7 +30,7 @@ DEBUG=True
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-ALLOWED_HOSTS = ['www.blooming-headland-11176.herokuapp.com','localhost:8000', 'www.localhost:8000', 'www.localhost','127.0.0.1','ux-todo.herokuapp.com']
+ALLOWED_HOSTS = ['www.blooming-headland-11176.herokuapp.com','blooming-headland-11176.herokuapp.com','localhost:8000', 'www.localhost:8000', 'www.localhost','127.0.0.1','ux-todo.herokuapp.com']
 
 SITE_ID=1
 
