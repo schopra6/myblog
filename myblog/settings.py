@@ -11,15 +11,16 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-from decouple import config
-from dj_database_url import parse as dburl
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
+#from decouple import config
+import dj_database_url
+#import parse as dburl
+#SECRET_KEY = config('SECRET_KEY')
+#DEBUG = config('DEBUG', default=False, cast=bool)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+DEBUG=True
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -29,7 +30,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-ALLOWED_HOSTS = ['www.newsblogger.ml','newsblogger.ml','0.0.0.0','127.0.0.1','.herokuapp.com']
+ALLOWED_HOSTS = ['www.blooming-headland-11176.herokuapp.com','localhost:8000', 'www.localhost:8000', 'www.localhost','127.0.0.1','ux-todo.herokuapp.com']
 
 SITE_ID=1
 
@@ -43,9 +44,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'django_comments',
-    'mptt',
-    'tagging',
+    'todo',
+    'accounts',
+    'crispy_forms',
+    #'django_comments',
+   # 'mptt',
+    #'tagging',
 
 ]
 
@@ -92,8 +96,19 @@ WSGI_APPLICATION = 'myblog.wsgi.application'
 #        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #    }
 #}
-default_dburl = 'postgres://sam:hell1@localhost:/myb'
-DATABASES = { 'default': config('DATABASE_URL', default=default_dburl, cast=dburl), }
+#default_dburl = 'postgres://sam:hell1@localhost:/myb'
+#DATABASES = { 'default': config('DATABASE_URL', default=default_dburl, cast=dburl), }
+
+DATABASES = {
+    'default': {
+        'NAME': 'myb',
+        'ENGINE': 'django.db.backends.postgresql',
+        'USER': 'sam',
+        'PASSWORD': 'hell1',
+        'HOST': 'localhost',
+        'PORT': ''
+    }
+}
 
 SECRET_KEY='-9qiqh6bc3dtgh3$u_36vzoi=s_2%0m#mmmie%3o5$v(do92g8'
 
@@ -137,10 +152,13 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 ZINNIA_MARKUP_LANGUAGE = 'markdown'
 STATIC_ROOT = os.path.join(BASE_DIR, "../static/")
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 THUMBNAIL_DEBUG = True
+
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
