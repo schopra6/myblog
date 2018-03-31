@@ -4,6 +4,7 @@
 
 <html lang="{{ LANGUAGE_CODE }}">
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -12,6 +13,8 @@
     {% block meta %}{% endblock meta %}
     <link rel="pingback" href="/xmlrpc/" />
     <link rel="home" href="{% url 'zinnia:entry_archive_index' %}" />
+      <link rel="shortcut icon" href="{% static 'zinnia/theme/img/favicon.ico' %}" />
+        <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static 'zinnia/theme/css/screen.css' %}" />
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css"  href="{% static 'zinnia/theme/css/default.css' %}" />
     <link rel="stylesheet" type="text/css"  href="{% static 'zinnia/theme/css/style.css' %}" />
@@ -28,6 +31,7 @@
 
     {% block link %}{% endblock link %}
     {% block script %}{% endblock script %}
+
   </head>
   <body>
 
@@ -38,6 +42,8 @@
 
 
         {% endblock content %}
+
+
       {%block sidebar%}
       {%endblock sidebar%}
       {% block admin-tools %}

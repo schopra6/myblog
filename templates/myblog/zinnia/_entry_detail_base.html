@@ -9,10 +9,10 @@
       </a>  </a></h2>
     {% endblock entry-title %}
     <ul class="post-meta">
-      <li><i class="mdi mdi-calendar"></i>{% block entry-published %}
+      <li><i class="zmdi zmdi-calendar"></i>{% block entry-published %}
       <time class="published" datetime="{{ object.publication_date|date:"c" }}" itemprop="datePublished">{{ object.publication_date|date:"DATE_FORMAT" }}</time>
       {% endblock entry-published %}</li>
-      <li><i class="mdi mdi-tag-text-outline"></i>  {% block entry-tags %}
+      <li><i class="zmdi zmdi-tag-text-outline"></i>  {% block entry-tags %}
     <p class="entry-tags">
       <strong>{% trans "Tags" %}</strong> :
       <meta itemprop="keywords" content="{{ object.tags }}" />
@@ -25,7 +25,7 @@
       {% endfor %}
     </p>
     {% endblock entry-tags %}</li>
-      <li><i class="mdi mdi-comment-multiple-outline"></i> {% block entry-discussions %}
+      <li><i class="zmdi zmdi-comment-multiple-outline"></i> {% block entry-discussions %}
     <p class="entry-discussions">
       {% block entry-comments %}
       {% with comment_count=object.comment_count %}
@@ -129,7 +129,7 @@
          title="{% blocktrans with object=object.title percent=object_content.remaining_percent|floatformat:0 %}{{ percent }}% of {{ object }} still remains to read.{% endblocktrans %}"
          rel="bookmark" itemprop="url" class="btn btn-outline-custom">
         {% trans "Continue reading" %}
-        <i class="mdi mdi-arrow-right"></i>
+        <i class="zmdi zmdi-arrow-right"></i>
       </a>
 
     {% endif %}
