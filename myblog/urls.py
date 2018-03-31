@@ -24,11 +24,7 @@ from  accounts.views import (login_view, register_view, logout_view)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('todo.urls')),
-    url(r'^accounts/register/', register_view, name='register'),
-     url(r'^accounts/login/', login_view, name='login'),
-     url(r'^accounts/logout/', logout_view, name='logout'),
-     url(r'^weblog/', include('zinnia.urls')),
+    url(r'^', include('zinnia.urls')),
      url(r'^comments/', include('django_comments.urls')),
 
      url(r'^', include('zinnia.urls')),
