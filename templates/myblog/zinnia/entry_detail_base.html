@@ -1,0 +1,146 @@
+{% extends "zinnia/base.html" %}
+{% load i18n %}
+{% load zinnia %}
+{% load comments %}
+{% load staticfiles %}
+
+
+{% block title %}{{ object.title }}{% endblock title %}
+
+{% block meta-description %}{{ object.excerpt|safe }}{% endblock meta-description %}
+
+{% block meta-keywords %}{% if object.tags %}{{ object.tags }}{% else %}{{ block.super }}{% endif %}{% endblock meta-keywords %}
+
+
+
+{% block body-class %}entry entry-{{ object.pk }}{% if object.featured %} featured{% endif %} year-{{ object.publication_date|date:"Y" }} month-{{ object.publication_date|date:"m" }} week-{{ object.publication_date|date:"W" }} day-{{ object.publication_date|date:"d" }}{% endblock body-class %}
+
+{% block content %}
+
+<div id="wrapper">
+            <!-- Top Bar Start -->
+   <section class="mt-5 pb-5">
+                    <div class="container">
+
+                        <div class="row">
+                            <!-- Content-->
+                            <div class="col-xl-9">
+
+                                <!-- Post--><article class="post">
+
+{% block entry-content %}
+  {% include object.content_template with object_content=object.html_content %}
+{% endblock entry-content %}
+
+
+
+{% block entry-pingbacks %}
+
+{% endblock entry-pingbacks %}
+
+{% block entry-trackbacks %}
+
+{% endblock entry-trackbacks %}
+
+{% block entry-comments %}
+<section id="comments">
+  <h3>{% trans "Comments" %}</h3>
+  {% if object.comment_count %}
+  {% with comment_list=object.comments %}
+  {% block comments-loop %}
+  <ol id="comment-list">
+    {% for comment in comment_list %}
+    <li id="comment-{{ comment.pk }}-by-{{ comment.user_name|slugify }}"
+        class="comment vcard {% cycle 'box1' 'box2' %}{% if comment.user %} authenticated-comment{% if comment.user.is_staff %} staff-comment{% endif %}{% if comment.user.is_superuser %} superuser-comment{% endif %}{% endif %}">
+      {% block comment-image %}
+      <img src="{% get_gravatar comment.email 60 "G" %}"
+           class="gravatar photo" alt="{{ comment.name }}" />
+      {% endblock comment-image %}
+      {% block comment-info %}
+      <p class="comment-info">
+        {% blocktrans with comment_url=comment.url|default:"#" comment_name=comment.name comment_human_date=comment.submit_date|date:"SHORT_DATETIME_FORMAT" comment_technical_date=comment.submit_date|date:"c" comment_pk=comment.pk comment_author_slug=comment.user_name|slugify trimmed %}
+        <a href="{{ comment_url }}" rel="external nofollow"
+           class="fn url">{{ comment_name }}</a>
+        on
+        <time class="comment-published" datetime="{{ comment_technical_date }}">
+          {{ comment_human_date }}
+        </time>
+        <a href="#comment-{{ comment_pk }}-by-{{ comment_author_slug }}"
+           id="c{{ comment_pk }}" class="anchor-link"
+           title="Direct link to this comment">#</a>
+        {% endblocktrans %}
+      </p>
+      {% endblock comment-info %}
+      {% block comment-content %}
+      {{ comment.comment|linebreaks }}
+      {% endblock comment-content %}
+    </li>
+    {% endfor %}
+  </ol>
+  {% endblock comments-loop %}
+  {% endwith %}
+    {% if not object.comments_are_open %}
+  <p>{% trans "Comments are closed." %}</p>
+    {% endif %}
+  {% else %}
+    {% if object.comments_are_open %}
+  <p>{% trans "No comments yet." %}</p>
+    {% else %}
+  <p>{% trans "Comments are closed." %}</p>
+    {% endif %}
+  {% endif %}
+</section>
+{% endblock entry-comments %}
+
+{% block entry-comments-form %}
+{% if object.comments_are_open %}
+  {% render_comment_form for object %}
+{% endif %}
+{% endblock entry-comments-form %}
+                                  </article>
+                            </div>
+                          <div class="col-xl-3">
+                                <div class="sidebar">
+
+                                    <!-- Search widget-->
+                                    <aside class="widget widget_search">
+                                        <form method="get" action="{% url 'zinnia:entry_search' %}">
+                              <p>
+                                <input class="form-control pr-5"  type="text" name="pattern" placeholder="{% trans "Keywords..." %}" {% if pattern %}value="{{ pattern }}"{% endif %} />
+                                <button class="search-button" type="submit"><span class="mdi mdi-magnify"></span></button>
+                              </p>
+                            </form>
+                                    </aside>
+
+                                    <!-- Categories widget-->
+                                    <aside class="widget widget_categories">
+                                        <h3>Categories</h3>
+
+
+
+                                        {% get_categories %}
+                                      </aside>
+                                     <!-- Archives widget-->
+                                    <aside  id="widget-archives" class="widget">
+                                    <h3>{% trans "Archives" %}</h3>
+                                        {% get_archives_entries_tree %}
+                                    </aside>
+
+                                    <!-- Recent entries widget-->
+
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+   </section>
+  </div>
+{% endblock content %}
+{% block admin-tools %}
+{% if perms.zinnia.change_entry %}
+<li>
+  <a href="{% url 'admin:zinnia_entry_change' object.pk %}" title="{% trans "Edit the entry" %}">
+    {% trans "Edit the entry" %}
+  </a>
+</li>
+{% endif %}
+{% endblock admin-tools %}

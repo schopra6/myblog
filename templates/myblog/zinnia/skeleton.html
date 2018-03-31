@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% load staticfiles %}
+
+<html lang="{{ LANGUAGE_CODE }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{% block title %}{% endblock title %}{% block title-page %}{% endblock title-page %}Blog Home - Start Bootstrap Template</title>
+    {% block meta %}{% endblock meta %}
+    <link rel="pingback" href="/xmlrpc/" />
+    <link rel="home" href="{% url 'zinnia:entry_archive_index' %}" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"  href="{% static 'zinnia/theme/css/default.css' %}" />
+    <link rel="stylesheet" type="text/css"  href="{% static 'zinnia/theme/css/style.css' %}" />
+
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,600,700" rel="stylesheet">
+
+
+           <!-- CUSTOM STYLESHEET -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.css" integrity="sha256-831vUCpalhrFw/F8jVhoX/aw3A9pwtzdN5zKvJbsO/I=" crossorigin="anonymous" />
+
+
+
+    {% block link %}{% endblock link %}
+    {% block script %}{% endblock script %}
+  </head>
+  <body>
+
+
+      {% block slider %}{% endblock slider %}
+
+        {% block content %}
+
+
+        {% endblock content %}
+      {%block sidebar%}
+      {%endblock sidebar%}
+      {% block admin-tools %}
+      {% endblock admin-tools %}
+       <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; newsblogger.ml 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+      <!-- Bootstrap core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js" integrity="sha256-tw5/wId1F+4LyUF2ZJnpRoHNXJ66jrK3IGhfq4LhLjY=" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+{% load i18n %}
+{% load zinnia %}
+<article id="entry-{{ object.pk }}" class="hentry{% if object.featured %} featured{% endif %}" itemscope itemtype="http://schema.org/Article">
+  {% block entry-header %}
+  <div class="post-header">
+    {% block entry-title %}
+     <h2 class="post-title"><a href="#">  <a href="{{ object.get_absolute_url }}" title="{{ object.title }}" rel="bookmark" itemprop="url">
+        {{ object.title|widont }}
+      </a>  </a></h2>
+    {% endblock entry-title %}
+    <ul class="post-meta">
+      <li><i class="mdi mdi-calendar"></i>{% block entry-published %}
+      <time class="published" datetime="{{ object.publication_date|date:"c" }}" itemprop="datePublished">{{ object.publication_date|date:"DATE_FORMAT" }}</time>
+      {% endblock entry-published %}</li>
+      <li><i class="mdi mdi-tag-text-outline"></i>  {% block entry-tags %}
+    <p class="entry-tags">
+      <strong>{% trans "Tags" %}</strong> :
+      <meta itemprop="keywords" content="{{ object.tags }}" />
+      {% for tag in object.tags_list %}
+      <a href="{% url 'zinnia:tag_detail' tag %}"
+         title="{% blocktrans %}Show all entries tagged by {{ tag }}{% endblocktrans %}"
+         rel="tag" itemprop="articleSection">{{ tag }}</a>
+      {% empty %}
+      <span>{% trans "No tags" %}</span>
+      {% endfor %}
+    </p>
+    {% endblock entry-tags %}</li>
+      <li><i class="mdi mdi-comment-multiple-outline"></i> {% block entry-discussions %}
+    <p class="entry-discussions">
+      {% block entry-comments %}
+      {% with comment_count=object.comment_count %}
+      <meta itemprop="commentCount" content="{{ object.comment_count }}" />
+      <meta itemprop="discussionUrl" content="{{ object.get_absolute_url }}#comments" />
+      {% if comment_count %}
+      <a href="{{ object.get_absolute_url }}#comments"
+         title="{% blocktrans with object=object.title %}Comments on {{ object }}{% endblocktrans %}">
+        {% blocktrans count comment_count=comment_count %}{{ comment_count }} comment{% plural %}{{ comment_count }} comments{% endblocktrans %}
+      </a>
+      {% else %}
+      {% if object.comments_are_open %}
+      {{ comment_count }}
+      <a href="{{ object.get_absolute_url }}#comment-form"
+         title="{% blocktrans with object=object.title %}Leave a comment on {{ object }}{% endblocktrans %}">
+        {% trans "comment" %}
+      </a>
+      {% else %}
+      {% trans "Comments are closed." %}
+      {% endif %}
+      {% endif %}
+      {% endwith %}
+      {% endblock entry-comments %}
+      {% block entry-pingbacks %}
+      {% with pingback_count=object.pingback_count %}
+      {% if pingback_count %}
+      , <a href="{{ object.get_absolute_url }}#pingbacks" title="{% blocktrans with object=object.title %}Pingbacks on {{ object }}{% endblocktrans %}">
+        {% blocktrans count pingback_count=pingback_count %}{{ pingback_count }} pingback{% plural %}{{ pingback_count }} pingbacks{% endblocktrans %}
+      </a>
+      {% endif %}
+      {% endwith %}
+      {% endblock entry-pingbacks %}
+      {% block entry-trackbacks %}
+      {% with trackback_count=object.trackback_count %}
+      {% if trackback_count %}
+      , <a href="{{ object.get_absolute_url }}#trackbacks" title="{% blocktrans with object=object.title %}Trackbacks on {{ object }}{% endblocktrans %}">
+        {% blocktrans count trackback_count=trackback_count %}{{ trackback_count }} trackback{% plural %}{{ trackback_count }} trackbacks{% endblocktrans %}
+      </a>
+      {% endif %}
+      {% endwith %}
+      {% endblock entry-trackbacks %}
+    </p>
+    {% endblock entry-discussions %}
+ </li>
+    </ul>
+  </div>
+  <div class="post-preview">
+     {% block entry-image %}
+    {% if object.image %}
+
+      {% if continue_reading %}
+
+      <a href="{{ object.get_absolute_url }}" title="{{ object.title }}"  alt="" class="img-fluid rounded">
+        {% endif %}
+        <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <img src="{{ object.image.url }}" class="img-thumbnail" alt="{{ object.image_caption|default:object.title }}" height="400px" width="400px" />
+          {% if object.image_caption %}
+          <figcaption itemprop="caption">{{ object.image_caption }}</figcaption>
+          {% endif %}
+        </figure>
+        {% if continue_reading %}
+
+      </a>
+      {% endif %}
+
+    {% endif %}
+    {% endblock entry-image %}
+
+  </div>
+
+  {% endblock entry-header %}
+
+  {% block entry-body %}
+  <div class="post-content">
+    {% block entry-word-count %}
+    <meta itemprop="wordCount" content="{{ object.word_count }}" />
+    {% endblock entry-word-count %}
+
+
+    {% block entry-lead %}
+    {% if not continue_reading and object.lead %}
+    <div class="entry-summary" itemprop="headline">
+      {{ object.html_lead|safe }}
+    </div>
+    {% endif %}
+    {% endblock entry-lead %}
+
+    {% block entry-content %}
+    <div class="entry-content" itemprop="articleBody">
+      {{ object_content|safe }}
+    </div>
+    {% endblock entry-content %}
+
+      </div>
+  <div>
+
+  {%block continue-reading %}
+    {% if continue_reading and object_content.has_more %}
+
+      <a href="{{ object.get_absolute_url }}"
+         title="{% blocktrans with object=object.title percent=object_content.remaining_percent|floatformat:0 %}{{ percent }}% of {{ object }} still remains to read.{% endblocktrans %}"
+         rel="bookmark" itemprop="url" class="btn btn-outline-custom">
+        {% trans "Continue reading" %}
+        <i class="mdi mdi-arrow-right"></i>
+      </a>
+
+    {% endif %}
+    {% endblock continue-reading %}
+
+  </div>
+
+
+{% endblock entry-body %}
+
+
+  {% block entry-footer %}
+  {% endblock entry-footer %}
+</article>
