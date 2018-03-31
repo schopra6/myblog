@@ -2,108 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baab7027-1901-4099-8ddf-ebd6ba7bac8b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/config/_base.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/config/_solarized.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/ie.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/mixins/_alert-box.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/mixins/_breakpoint.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/mixins/_delimited-list.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/mixins/_icons.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/mixins/_link-colors.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/mixins/_slider-buttons.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/mixins/_tag-cloud.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_archives.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_breadcrumbs.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_entry.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_feeds.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_footer.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_forms.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_header.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_interactions.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_layouts.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_linkbacks.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_page.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_paginator.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_sidebar.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_slider.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_themes.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/print.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/sass/screen.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/theme/css/ie.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/theme/css/print.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/zinnia/theme/css/screen.css" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/myblog/settings.py" afterPath="$PROJECT_DIR$/myblog/settings.py" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/base.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/changelists.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/dashboard.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/fonts.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/forms.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/login.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/rtl.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/css/widgets.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/fonts/LICENSE.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/fonts/README.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/fonts/Roboto-Bold-webfont.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/fonts/Roboto-Light-webfont.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/fonts/Roboto-Regular-webfont.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/README.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/calendar-icons.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_off.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_on.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-addlink.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-alert.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-calendar.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-changelink.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-clock.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-deletelink.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-no.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-unknown-alt.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-unknown.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-yes.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/inline-delete.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/search.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/selector-icons.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/sorting-icons.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/tooltag-add.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/tooltag-arrowright.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/SelectBox.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/SelectFilter2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/actions.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/actions.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/admin/DateTimeShortcuts.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/admin/RelatedObjectLookups.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/calendar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/cancel.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/change_form.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/collapse.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/collapse.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/core.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/inlines.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/inlines.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/jquery.init.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/popup_response.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/prepopulate.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/prepopulate.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/prepopulate_init.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/timeparse.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/urlify.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/mptt/arrow-move.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/mptt/disclosure-down.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/mptt/disclosure-right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/mptt/draggable-admin.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/mptt/draggable-admin.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/zinnia/theme/sass/partials/_reset.scss" afterPath="$PROJECT_DIR$/static/zinnia/sass/partials/_reset.scss" />
-      <change beforePath="$PROJECT_DIR$/templates/myblog/zinnia/_entry_detail_base.html" afterPath="$PROJECT_DIR$/templates/myblog/zinnia/_entry_detail_base.html" />
-      <change beforePath="$PROJECT_DIR$/templates/myblog/zinnia/entry_list.html" afterPath="$PROJECT_DIR$/templates/myblog/zinnia/entry_list.html" />
-      <change beforePath="$PROJECT_DIR$/templates/myblog/zinnia/skeleton.html" afterPath="$PROJECT_DIR$/templates/myblog/zinnia/skeleton.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -177,8 +77,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myblog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+            <state relative-caret-position="391">
+              <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
               <folding>
                 <element signature="e#311#320#0" expanded="true" />
               </folding>
@@ -878,8 +778,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myblog/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        <state relative-caret-position="391">
+          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
           <folding>
             <element signature="e#311#320#0" expanded="true" />
           </folding>
