@@ -32,7 +32,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #ALLOWED_HOSTS = ['fierce-taiga-40236.herokuapp.com','localhost:8000', 'www.localhost:8000', 'www.localhost','127.0.0.1']
 ALLOWED_HOSTS=['*']
-DEBUG=True
+DEBUG=False
 # Application definition
 
 INSTALLED_APPS = [
@@ -159,8 +159,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-#STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 ZINNIA_MARKUP_LANGUAGE = 'markdown'
 STATIC_ROOT = os.path.join(BASE_DIR, "../static/")
 MEDIA_URL = '/media/'
