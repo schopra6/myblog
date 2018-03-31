@@ -30,8 +30,8 @@ DEBUG=True
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-#ALLOWED_HOSTS = ['fierce-taiga-40236.herokuapp.com','localhost:8000', 'www.localhost:8000', 'www.localhost','127.0.0.1']
-ALLOWED_HOSTS=['*']
+ALLOWED_HOSTS = ['fierce-taiga-40236.herokuapp.com','localhost:8000', 'www.localhost:8000', 'www.localhost','127.0.0.1']
+#ALLOWED_HOSTS=['*']
 
 # Application definition
 
