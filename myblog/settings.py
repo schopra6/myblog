@@ -32,7 +32,7 @@ DEBUG=True
 
 ALLOWED_HOSTS = ['fierce-taiga-40236.herokuapp.com','blooming-headland-11176.herokuapp.com','localhost:8000', 'www.localhost:8000', 'www.localhost','127.0.0.1','ux-todo.herokuapp.com']
 
-SITE_ID=1
+
 
 # Application definition
 
@@ -150,7 +150,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
+SITE_ID=1
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
