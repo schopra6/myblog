@@ -52,7 +52,7 @@ INSTALLED_APPS = [
 
 
 ]
-DEBUG=True
+DEBUG=False
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
