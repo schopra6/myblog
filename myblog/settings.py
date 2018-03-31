@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 #from decouple import config
 import dj_database_url
-
+import django_heroku
 #import parse as dburl
 #SECRET_KEY = config('SECRET_KEY')
 #DEBUG = config('DEBUG', default=False, cast=bool)
@@ -170,3 +170,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 SITE_ID=2
+django_heroku.settings(locals())
