@@ -44,13 +44,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    #'todo',
-    #'accounts',
-    #'crispy_forms',
-    #'zinnia',
-    #'django_comments',
-    #'mptt',
-    #'tagging',
+    'todo',
+    'accounts',
+    'crispy_forms',
+    'zinnia',
+    'django_comments',
+    'mptt',
+    'tagging',
 
 
 
