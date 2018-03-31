@@ -32,8 +32,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #ALLOWED_HOSTS = ['fierce-taiga-40236.herokuapp.com','localhost:8000', 'www.localhost:8000', 'www.localhost','127.0.0.1']
 ALLOWED_HOSTS=['*']
-
-
+DEBUG=True
 # Application definition
 
 INSTALLED_APPS = [
