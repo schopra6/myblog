@@ -47,10 +47,10 @@ INSTALLED_APPS = [
     'todo',
     'accounts',
     'crispy_forms',
-     'zinnia',
-    'django_comments',
-   'mptt',
-    'tagging',
+    #'zinnia',
+    #'django_comments',
+    #'mptt',
+    #'tagging',
 
 
 
