@@ -19,7 +19,7 @@ from django.conf.urls import include
 from django.conf.urls import url
 from django.conf import settings
 from django.conf.urls.static import static
-from  accounts.views import (login_view, register_view, logout_view)
+
 
 
 urlpatterns = [
