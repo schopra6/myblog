@@ -32,5 +32,4 @@ django-qsstats-magic==0.7.2
 django-smtp-ssl==1.0
 django-appconf==1.0.2
 django-autoslug==1.9.3
-django-blog-zinnia==0.20
 
