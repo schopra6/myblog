@@ -145,8 +145,8 @@ USE_L10N = True
 USE_TZ = True
 
 EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'akonchopraa@gmail.com'
-EMAIL_HOST_PASSWORD = 'haloween13'
+EMAIL_HOST_USER = 'dsahil'
+EMAIL_HOST_PASSWORD = 'Haloween13'
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_PORT = 587
