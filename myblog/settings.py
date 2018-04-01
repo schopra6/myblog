@@ -14,7 +14,7 @@ import os
 #from decouple import config
 import dj_database_url
 import django_heroku
-import sendgrid_events
+
 #import parse as dburl
 #SECRET_KEY = config('SECRET_KEY')
 #DEBUG = config('DEBUG', default=False, cast=bool)
@@ -32,7 +32,7 @@ DEBUG=False
 
 
 ALLOWED_HOSTS = ['fierce-taiga-40236.herokuapp.com','localhost:8000', 'www.localhost:8000', 'www.localhost','127.0.0.1']
-#ALLOWED_HOSTS=['*']
+
 
 # Application definition
 
@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'django_comments',
     'mptt',
     'tagging',
-    'sendgrid_events',
+    #'sendgrid_events',
 
 
 ]
