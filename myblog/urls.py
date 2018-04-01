@@ -20,10 +20,9 @@ from django.conf.urls import url
 from django.conf import settings
 from django.conf.urls.static import static
 
-
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url("sendgrid/", include("sendgrid_events.urls")),
     url(r'^blog/', include('zinnia.urls')),
-     url(r'^comments/', include('django_comments.urls')),
+    url(r'^comments/', include('django_comments.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

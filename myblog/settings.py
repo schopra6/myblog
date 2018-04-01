@@ -14,13 +14,14 @@ import os
 #from decouple import config
 import dj_database_url
 import django_heroku
+import sendgrid_events
 #import parse as dburl
 #SECRET_KEY = config('SECRET_KEY')
 #DEBUG = config('DEBUG', default=False, cast=bool)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#DEBUG=True
+DEBUG=True
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -47,7 +48,7 @@ INSTALLED_APPS = [
     'django_comments',
     'mptt',
     'tagging',
-
+     'sendgrid_events',
 
 
 ]
@@ -143,11 +144,11 @@ USE_L10N = True
 
 USE_TZ = True
 
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'akonchopraa@gmail.com'
+EMAIL_HOST_PASSWORD = 'haloween13'
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_PASSWORD = 'andrurussel' #my gmail password
-EMAIL_HOST_USER = 'akonchopraa@gmail.com' #my gmail username
 EMAIL_PORT = 587
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
