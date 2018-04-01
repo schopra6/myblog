@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'django_comments',
     'mptt',
     'tagging',
-    #'sendgrid_events',
+    'sendgrid_events',
 
 
 ]
