@@ -26,4 +26,4 @@ def sendgrid(request):
     if request.method == 'POST':
         post_data = parse_request(request.POST)
         sendgrid_email_received.send(sender=None, data=post_data)
-    return HttpResponse()
+    return HttpResponse(status=200)
