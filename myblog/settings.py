@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 #from decouple import config
 import dj_database_url
-import django_heroku
+
 
 #import parse as dburl
 #SECRET_KEY = config('SECRET_KEY')
@@ -21,7 +21,7 @@ import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DEBUG=False
+DEBUG=True
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -31,7 +31,7 @@ DEBUG=False
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-ALLOWED_HOSTS = ['fierce-taiga-40236.herokuapp.com','localhost:8000', 'www.localhost:8000', 'www.localhost','127.0.0.1']
+ALLOWED_HOSTS = ['localhost:8000', 'www.localhost:8000', 'www.localhost','127.0.0.1']
 
 
 # Application definition
@@ -170,4 +170,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 SITE_ID=2
-django_heroku.settings(locals())
